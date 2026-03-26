@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fusion Hub</title>
 <meta name="description" content="Fusion Hub digital agency offering web development, UI UX design and marketing services worldwide">
+<meta name="keywords" content="web development, UI UX, digital agency">
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -47,7 +48,7 @@
   <div class="hero-text">
     <h1>We Build Digital <span>Experiences</span></h1>
     <p>Fusion Hub helps brands grow with modern design, development and marketing solutions.</p>
-    <button class="btn">Start Your Project</button>
+    <button type="button" class="btn">Start Your Project</button>
   </div>
 
   <img class="hero-img" src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Digital illustration">
@@ -85,19 +86,32 @@
   <h2>Our Work</h2>
   <div class="portfolio-grid">
     <div class="portfolio-item">
-      <img class="lazy" data-src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="Ecommerce Website" loading="lazy">
+      <!-- Added src fallback & optimized URL for mobile -->
+      <img class="lazy" 
+           src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=10" 
+           data-src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600&q=80" 
+           alt="Ecommerce Website" loading="lazy">
       <div class="overlay"><h3>Ecommerce Website</h3></div>
     </div>
     <div class="portfolio-item">
-      <img class="lazy" data-src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="Business Website" loading="lazy">
+      <img class="lazy" 
+           src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=10" 
+           data-src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80" 
+           alt="Business Website" loading="lazy">
       <div class="overlay"><h3>Business Website</h3></div>
     </div>
     <div class="portfolio-item">
-      <img class="lazy" data-src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" alt="Mobile App UI" loading="lazy">
+      <img class="lazy" 
+           src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=10" 
+           data-src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80" 
+           alt="Mobile App UI" loading="lazy">
       <div class="overlay"><h3>Mobile App UI</h3></div>
     </div>
     <div class="portfolio-item">
-      <img class="lazy" data-src="https://images.unsplash.com/photo-1557804506-669a67965ba0" alt="Marketing Campaign" loading="lazy">
+      <img class="lazy" 
+           src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=10" 
+           data-src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80" 
+           alt="Marketing Campaign" loading="lazy">
       <div class="overlay"><h3>Marketing Campaign</h3></div>
     </div>
   </div>
@@ -133,7 +147,7 @@
       <p>Basic Website</p>
       <p>Responsive Design</p>
       <p>3 Pages</p>
-      <button class="btn">Choose Plan</button>
+      <button type="button" class="btn">Choose Plan</button>
     </div>
     <div class="price-card featured">
       <h3>Business</h3>
@@ -141,7 +155,7 @@
       <p>Professional Website</p>
       <p>SEO Optimization</p>
       <p>8 Pages</p>
-      <button class="btn">Choose Plan</button>
+      <button type="button" class="btn">Choose Plan</button>
     </div>
     <div class="price-card">
       <h3>Premium</h3>
@@ -149,7 +163,7 @@
       <p>Full Digital Solution</p>
       <p>Marketing Setup</p>
       <p>Unlimited Pages</p>
-      <button class="btn">Choose Plan</button>
+      <button type="button" class="btn">Choose Plan</button>
     </div>
   </div>
 </section>
@@ -180,7 +194,7 @@
 <section class="cta">
   <h2>Ready To Grow Your Business?</h2>
   <p>Let's build something amazing together.</p>
-  <button class="btn">Start Your Project</button>
+  <button type="button" class="btn">Start Your Project</button>
 </section>
 
 <!-- CONTACT -->
@@ -190,7 +204,7 @@
     <input type="text" placeholder="Your Name" name="name">
     <input type="email" placeholder="Email" name="email">
     <textarea placeholder="Tell us about your project" name="project"></textarea>
-    <button class="btn">Send Message</button>
+    <button type="submit" class="btn">Send Message</button>
   </form>
 </section>
 
