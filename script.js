@@ -1,7 +1,8 @@
 // ================== LOADER ==================
 window.addEventListener("load", function(){
     const loader = document.getElementById("loader");
-    loader.style.display = "none";
+    loader.style.opacity = "0"; // fade out
+    setTimeout(() => loader.style.display = "none", 300); // remove after transition
 });
 
 // ================== MOBILE MENU ==================
@@ -10,7 +11,6 @@ const navLinks = document.querySelector(".nav-links");
 
 menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("show");
-    // For accessibility
     menuToggle.setAttribute("aria-expanded", navLinks.classList.contains("show"));
 });
 
@@ -24,8 +24,9 @@ counters.forEach(counter => {
         const increment = target / 200;
 
         if(count < target){
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(updateCounter, 20);
+            count = Math.min(count + increment, target);
+            counter.innerText = Math.ceil(count);
+            requestAnimationFrame(updateCounter); // smoother than setTimeout
         } else {
             counter.innerText = target;
         }
@@ -47,8 +48,10 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             if(entry.isIntersecting){
                 const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove("lazy");
+                if(img.dataset.src){ // mobile fix: ensure data-src exists
+                    img.src = img.dataset.src;
+                    img.classList.remove("lazy");
+                }
                 observer.unobserve(img);
             }
         });
