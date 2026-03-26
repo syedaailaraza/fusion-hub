@@ -38,11 +38,11 @@ counters.forEach(counter => {
 document.addEventListener("DOMContentLoaded", function() {
     const lazyImages = document.querySelectorAll("img.lazy");
 
-    const options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1
-    };
+   const options = {
+  root: null,
+  rootMargin: "200px 0px", // preload 200px before viewport
+  threshold: 0.1
+};
 
     const lazyLoad = (entries, observer) => {
         entries.forEach(entry => {
