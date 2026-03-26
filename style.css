@@ -25,6 +25,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  transition: opacity 0.3s ease; /* smoother hide */
 }
 
 .spinner {
@@ -226,6 +227,7 @@ body {
   overflow: hidden;
   border-radius: 12px;
   height: 200px;
+  min-height: 150px; /* Mobile fix */
 }
 
 .portfolio-item img {
@@ -403,5 +405,10 @@ input, textarea {
   .nav-links.show li {
     margin: 15px 0;
     text-align: center;
+  }
+
+  /* Portfolio mobile fix */
+  .portfolio-item {
+    min-height: 180px;
   }
 }
