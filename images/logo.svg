@@ -1,0 +1,18 @@
+<svg width="220" height="60" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+<stop offset="0%" style="stop-color:#6C63FF"></stop>
+<stop offset="100%" style="stop-color:#00C2CB"></stop>
+</linearGradient>
+</defs>
+
+<text x="0" y="40" font-size="34" font-family="Poppins" fill="url(#grad1)" font-weight="700">
+Fusion
+</text>
+
+<text x="105" y="40" font-size="34" font-family="Poppins" fill="#1A1A2E" font-weight="700">
+Hub
+</text>
+
+</svg>
