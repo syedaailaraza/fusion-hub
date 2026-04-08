@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const options = {
         root: null,
-        rootMargin: "200px 0px", // preload 200px before viewport
+        rootMargin: "0px",
         threshold: 0.1
     };
 
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             if(entry.isIntersecting){
                 const img = entry.target;
-                if(img.dataset.src){
+                if(img.dataset.src){ // mobile fix: ensure data-src exists
                     img.src = img.dataset.src;
                     img.classList.remove("lazy");
                 }
